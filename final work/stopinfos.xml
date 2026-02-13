@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-12-23 10:41:01 by Eclipse SUMO sumo Version 1.21.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\User\2024-12-23-10-40-36\osm.net.xml.gz"/>
+        <route-files value="C:\Users\User\2024-12-23-10-40-36\trips.trips.xml"/>
+        <additional-files value="C:\Users\User\2024-12-23-10-40-36\osm_stops.add.xml"/>
+    </input>
+
+    <output>
+        <vehroute-output value="C:\Users\User\2024-12-23-10-40-36\vehroutes.xml"/>
+        <stop-output value="C:\Users\User\2024-12-23-10-40-36\stopinfos.xml"/>
+    </output>
+
+    <time>
+        <begin value="0.0"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-interval value="0"/>
+    </routing>
+
+    <report>
+        <aggregate-warnings value="5"/>
+        <error-log value="C:\Users\User\2024-12-23-10-40-36\trips.trips.xml.errorlog"/>
+        <no-step-log value="true"/>
+    </report>
+
+</sumoConfiguration>
+-->
+
+<stops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/stopinfo_file.xsd">
+    <stopinfo id="0_train_Shabd_Bhedi_Superfast_Express:_=_Ghazipur:0" type="pt_train" lane="382682989#0_0" pos="364.22" parking="0" started="62.00" ended="92.00" busStop="7630431377" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="1_train_Shabd_Bhedi_Superfast_Express:_=_Kolkata:0" type="pt_train" lane="382682989#0_0" pos="364.22" parking="0" started="129.00" ended="159.00" busStop="7630431377" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="2_subway_2:0" type="pt_subway" lane="610018750#0_0" pos="200.00" parking="0" started="146.00" ended="176.00" busStop="7976140070" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="3_subway_2:1" type="pt_subway" lane="535333527#0_0" pos="75.39" parking="0" started="166.00" ended="196.00" busStop="7628479190" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="2_subway_2:0" type="pt_subway" lane="610018750#0_0" pos="896.09" parking="0" started="212.00" ended="242.00" busStop="7976140068" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="3_subway_2:1" type="pt_subway" lane="535333527#1_0" pos="1234.19" parking="0" started="252.00" ended="282.00" busStop="5189265479" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="4_tram_17:0" type="pt_tram" lane="205080226#7_0" pos="34.01" parking="0" started="259.00" ended="289.00" busStop="2207611901" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="2_subway_2:0" type="pt_subway" lane="610018750#0_0" pos="2057.74" parking="0" started="295.00" ended="325.00" busStop="7976140064" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="3_subway_2:1" type="pt_subway" lane="535333527#1_0" pos="2044.85" parking="0" started="321.00" ended="351.00" busStop="7976140062" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="2_subway_2:0" type="pt_subway" lane="610018750#0_0" pos="2970.24" parking="0" started="369.00" ended="399.00" busStop="7976140061" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="5_tram_20/17:0" type="pt_tram" lane="205080226#7_0" pos="34.01" parking="0" started="389.00" ended="419.00" busStop="2207611901" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="3_subway_2:1" type="pt_subway" lane="535333527#3_0" pos="487.60" parking="0" started="394.00" ended="424.00" busStop="7976140065" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="2_subway_2:0" type="pt_subway" lane="610018750#0_0" pos="3786.19" parking="0" started="439.00" ended="469.00" busStop="5777572361" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="6_train_13114:0" type="pt_train" lane="224838572_0" pos="556.37" parking="0" started="470.00" ended="500.00" busStop="1074604498" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="3_subway_2:1" type="pt_subway" lane="535333527#4_0" pos="967.04" parking="0" started="479.00" ended="509.00" busStop="7976140067" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="7_subway_1:0" type="pt_subway" lane="610018755_0" pos="1234.86" parking="0" started="503.00" ended="533.00" busStop="11703491151" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="2_subway_2:0" type="pt_subway" lane="610018750#1_0" pos="202.74" parking="0" started="525.00" ended="555.00" busStop="5777572424" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="3_subway_2:1" type="pt_subway" lane="535333527#4_0" pos="1707.73" parking="0" started="547.00" ended="577.00" busStop="7976140071" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+    <stopinfo id="8_subway_1:1" type="pt_subway" lane="1124379129#0_0" pos="716.80" parking="0" started="572.00" ended="602.00" busStop="11703491150" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0"/>
+</stops>

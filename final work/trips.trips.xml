@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-12-23 10:41:00.523182 by $Id: ptlines2flows.py v1_3_1+0313-ccb31df3eb jakob.erdmann@dlr.de 2019-09-02 13:26:32 +0200 $ v1_21_0+0000-d7b3b481c43
+<configuration>
+    <net-file value="C:\Users\User\2024-12-23-10-40-36\osm.net.xml.gz"/>
+    <ptlines-file value="C:\Users\User\2024-12-23-10-40-36\osm_ptlines.xml"/>
+    <ptstops-file value="C:\Users\User\2024-12-23-10-40-36\osm_stops.add.xml"/>
+    <output-file value="C:\Users\User\2024-12-23-10-40-36\osm_pt.rou.xml"/>
+    <stopinfos-file value="C:\Users\User\2024-12-23-10-40-36\stopinfos.xml"/>
+    <routes-file value="C:\Users\User\2024-12-23-10-40-36\vehroutes.xml"/>
+    <trips-file value="C:\Users\User\2024-12-23-10-40-36\trips.trips.xml"/>
+    <min-stops value="0"/>
+    <extend-to-fringe value="True"/>
+    <random-begin value="True"/>
+    <seed value="42"/>
+    <ignore-errors value="True"/>
+    <vtype-prefix value="pt_"/>
+    <verbose value="True"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_tram" vClass="tram" speedFactor="1.0"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="subway"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail_urban"/>
+    <vType id="pt_trolleybus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_minibus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_share_taxi" vClass="taxi" speedFactor="0.95"/>
+    <vType id="pt_aerialway" vClass="cable_car" length="2.5" width="2" personCapacity="4"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    <trip id="0_train_Shabd_Bhedi_Superfast_Express:_=_Ghazipur:0" type="pt_train" depart="15.0" departLane="best" from="382682989#0" to="382679583#2">
+        <stop busStop="7630431377" duration="30"/>  <!-- Kolkata Chitpur -->
+    </trip>
+    <trip id="1_train_Shabd_Bhedi_Superfast_Express:_=_Kolkata:0" type="pt_train" depart="52.0" departLane="best" from="382682989#0" to="382682989#0">
+        <stop busStop="7630431377" duration="30"/>  <!-- Kolkata Chitpur -->
+    </trip>
+    <trip id="2_subway_2:0" type="pt_subway" depart="133.0" departLane="best" from="610018750#0" to="610018750#1">
+        <stop busStop="7976140070" duration="30"/>  <!-- Salt Lake Stadium -->
+        <stop busStop="7976140068" duration="30"/>  <!-- Bengal Chemical -->
+        <stop busStop="7976140064" duration="30"/>  <!-- City Centre -->
+        <stop busStop="7976140061" duration="30"/>  <!-- Central Park -->
+        <stop busStop="5777572361" duration="30"/>  <!-- Karunamoyee -->
+        <stop busStop="5777572424" duration="30"/>  <!-- Salt Lake Sector V -->
+    </trip>
+    <trip id="3_subway_2:1" type="pt_subway" depart="165.0" departLane="best" from="535333527#0" to="535333527#4">
+        <stop busStop="7628479190" duration="30"/>  <!-- Salt Lake Sector V -->
+        <stop busStop="5189265479" duration="30"/>  <!-- Karunamoyee -->
+        <stop busStop="7976140062" duration="30"/>  <!-- Central Park -->
+        <stop busStop="7976140065" duration="30"/>  <!-- City Centre -->
+        <stop busStop="7976140067" duration="30"/>  <!-- Bengal Chemical -->
+        <stop busStop="7976140071" duration="30"/>  <!-- Salt Lake Stadium -->
+    </trip>
+    <trip id="4_tram_17:0" type="pt_tram" depart="253.0" departLane="best" from="205080226#7" to="205080226#7">
+        <stop busStop="2207611901" duration="30"/>  <!-- Bidhan Nagar -->
+    </trip>
+    <trip id="5_tram_20/17:0" type="pt_tram" depart="383.0" departLane="best" from="205080226#7" to="205080226#7">
+        <stop busStop="2207611901" duration="30"/>  <!-- Bidhan Nagar -->
+    </trip>
+    <trip id="6_train_13114:0" type="pt_train" depart="406.0" departLane="best" from="224838572" to="224838572">
+        <stop busStop="1074604498" duration="30"/>  <!-- Kolkata Chitpur -->
+    </trip>
+    <trip id="7_subway_1:0" type="pt_subway" depart="441.0" departLane="best" from="610018755" to="610018755">
+        <stop busStop="11703491151" duration="30"/>  <!-- Belgachia -->
+    </trip>
+    <trip id="8_subway_1:1" type="pt_subway" depart="535.0" departLane="best" from="1124379129#0" to="1124379129#0">
+        <stop busStop="11703491150" duration="30"/>  <!-- Belgachia -->
+    </trip>
+</routes>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-12-23 10:40:55 by Eclipse SUMO netconvert Version 1.21.0
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}\data\typemap\osmNetconvert.typ.xml,${SUMO_HOME}\data\typemap\osmNetconvertAerialway.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+        <lefthand value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <edge_removal>
+        <keep-edges.by-vclass value="passenger,bus,tram,rail_urban,subway,cable_car,rail"/>
+    </edge_removal>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+</netconvertConfiguration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="-1074604498" name="Kolkata Chitpur" lane="-224838572_0" startPos="238.39" endPos="438.39" friendlyPos="true">
+        <access lane="-1105779019#0_0" pos="26.48" length="170.05" friendlyPos="1"/>
+        <access lane="-718805188#6_0" pos="0.00" length="179.21" friendlyPos="1"/>
+        <access lane="1105779019#0_0" pos="19.10" length="165.25" friendlyPos="1"/>
+        <access lane="1105779019#1_0" pos="0.00" length="176.27" friendlyPos="1"/>
+        <access lane="718805188#6_0" pos="168.28" length="174.92" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-11703491151" name="Belgachia" lane="-610018755_0" startPos="465.72" endPos="665.72" friendlyPos="true">
+        <access lane="-1105779017#0_0" pos="136.68" length="43.57" friendlyPos="1"/>
+        <access lane="1032449334#2_0" pos="172.28" length="20.23" friendlyPos="1"/>
+        <access lane="1032449334#5_0" pos="0.00" length="47.01" friendlyPos="1"/>
+        <access lane="1105779017#0_0" pos="0.00" length="39.25" friendlyPos="1"/>
+        <access lane="51765465#4_0" pos="73.99" length="5.39" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-2207611901" name="Bidhan Nagar" lane="-205080225#0_0" startPos="13.84" endPos="38.84" friendlyPos="true">
+        <access lane="-113752054#4_0" pos="19.03" length="0.35" friendlyPos="1"/>
+        <access lane="-113752054#5_0" pos="75.13" length="47.70" friendlyPos="1"/>
+        <access lane="113752054#3_0" pos="24.31" length="4.45" friendlyPos="1"/>
+        <access lane="113752054#5_0" pos="0.00" length="47.91" friendlyPos="1"/>
+        <access lane="189921783#3_0" pos="51.08" length="57.26" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-7630431374" name="Kolkata Chitpur" lane="-382679581#1_0" startPos="327.12" endPos="527.12" friendlyPos="true">
+        <access lane="-1105779019#0_0" pos="31.40" length="119.82" friendlyPos="1"/>
+        <access lane="-1105779020#2_0" pos="0.00" length="131.68" friendlyPos="1"/>
+        <access lane="-718805188#6_0" pos="0.00" length="129.13" friendlyPos="1"/>
+        <access lane="1105779019#0_0" pos="14.17" length="115.02" friendlyPos="1"/>
+        <access lane="718805188#6_0" pos="168.28" length="124.97" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-7630431377" name="Kolkata Chitpur" lane="-382682989#0_0" startPos="388.99" endPos="588.99" friendlyPos="true">
+        <access lane="-1105779019#0_0" pos="30.33" length="142.63" friendlyPos="1"/>
+        <access lane="-718805188#6_0" pos="0.00" length="151.28" friendlyPos="1"/>
+        <access lane="1105779019#0_0" pos="15.25" length="137.83" friendlyPos="1"/>
+        <access lane="1105779019#1_0" pos="0.00" length="153.30" friendlyPos="1"/>
+        <access lane="718805188#6_0" pos="168.28" length="147.03" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1074604498" name="Kolkata Chitpur" lane="224838572_0" startPos="356.37" endPos="556.37" friendlyPos="true">
+        <access lane="-1105779019#0_0" pos="26.48" length="170.05" friendlyPos="1"/>
+        <access lane="-718805188#6_0" pos="0.00" length="179.21" friendlyPos="1"/>
+        <access lane="1105779019#0_0" pos="19.10" length="165.25" friendlyPos="1"/>
+        <access lane="1105779019#1_0" pos="0.00" length="176.27" friendlyPos="1"/>
+        <access lane="718805188#6_0" pos="168.28" length="174.92" friendlyPos="1"/>
+    </busStop>
+    <busStop id="11703491150" name="Belgachia" lane="1124379129#0_0" startPos="516.80" endPos="716.80" friendlyPos="true">
+        <access lane="-1105779017#0_0" pos="136.68" length="48.33" friendlyPos="1"/>
+        <access lane="-720171773_0" pos="6.28" length="47.75" friendlyPos="1"/>
+        <access lane="1032449334#5_0" pos="20.99" length="11.25" friendlyPos="1"/>
+        <access lane="51765465#4_0" pos="24.71" length="2.82" friendlyPos="1"/>
+        <access lane="720171773_0" pos="165.84" length="42.95" friendlyPos="1"/>
+    </busStop>
+    <busStop id="11703491151" name="Belgachia" lane="610018755_0" startPos="1034.89" endPos="1234.89" friendlyPos="true">
+        <access lane="-1105779017#0_0" pos="136.68" length="43.57" friendlyPos="1"/>
+        <access lane="1032449334#2_0" pos="172.28" length="20.23" friendlyPos="1"/>
+        <access lane="1032449334#5_0" pos="0.00" length="47.01" friendlyPos="1"/>
+        <access lane="1105779017#0_0" pos="0.00" length="39.25" friendlyPos="1"/>
+        <access lane="51765465#4_0" pos="73.99" length="5.39" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2141425962" name="Bidhannagar Road" lane="204128936#2_0" startPos="1424.24" endPos="1624.24" friendlyPos="true">
+        <access lane="-113752054#1_0" pos="11.68" length="88.66" friendlyPos="1"/>
+        <access lane="-113752054#4_0" pos="43.34" length="102.30" friendlyPos="1"/>
+        <access lane="113752054#1_0" pos="52.30" length="93.46" friendlyPos="1"/>
+        <access lane="1324038319_0" pos="46.88" length="94.72" friendlyPos="1"/>
+        <access lane="693369022_0" pos="397.13" length="35.46" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2141425973" name="Bidhannagar Road" lane="203446538#4_0" startPos="1367.75" endPos="1567.75" friendlyPos="true">
+        <access lane="-113752054#1_0" pos="10.71" length="63.92" friendlyPos="1"/>
+        <access lane="-113752054#4_0" pos="43.34" length="80.91" friendlyPos="1"/>
+        <access lane="-189921783#3_0" pos="0.00" length="80.78" friendlyPos="1"/>
+        <access lane="113752054#1_0" pos="53.26" length="68.72" friendlyPos="1"/>
+        <access lane="693369022_0" pos="396.38" length="60.22" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2207611901" name="Bidhan Nagar" lane="205080226#7_0" startPos="9.01" endPos="34.01" friendlyPos="true">
+        <access lane="-113752054#4_0" pos="19.03" length="0.35" friendlyPos="1"/>
+        <access lane="-113752054#5_0" pos="75.13" length="47.70" friendlyPos="1"/>
+        <access lane="113752054#3_0" pos="24.31" length="4.45" friendlyPos="1"/>
+        <access lane="113752054#5_0" pos="0.00" length="47.91" friendlyPos="1"/>
+        <access lane="189921783#3_0" pos="51.08" length="57.26" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2723410806" name="Acharya Jagadish Chandra Bose Road / Sri Aurobindo Sarani" lane="218973644#2_0" startPos="129.72" endPos="154.72" friendlyPos="true">
+        <access lane="1029381531#4_0" pos="231.94" length="25.12" friendlyPos="1"/>
+        <access lane="103185300#3_0" pos="172.62" length="30.05" friendlyPos="1"/>
+        <access lane="1032031704#2_0" pos="0.00" length="43.60" friendlyPos="1"/>
+        <access lane="105578155#2_0" pos="102.70" length="48.04" friendlyPos="1"/>
+        <access lane="27552926#0_0" pos="12.37" length="5.50" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3859050133" name="Kolkata Chitpur" lane="382543464_0" startPos="398.29" endPos="598.29" friendlyPos="true">
+        <access lane="-1105779019#0_0" pos="25.07" length="176.55" friendlyPos="1"/>
+        <access lane="1105779019#0_0" pos="20.51" length="171.75" friendlyPos="1"/>
+        <access lane="1105779019#1_0" pos="0.00" length="181.68" friendlyPos="1"/>
+        <access lane="361033192#0_0" pos="492.88" length="178.09" friendlyPos="1"/>
+        <access lane="718805188#6_0" pos="168.28" length="181.75" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5189265479" name="Karunamoyee" lane="535333527#1_0" startPos="1034.20" endPos="1234.20" friendlyPos="true" lines="2">
+        <access lane="1341268592#0_0" pos="127.25" length="134.76" friendlyPos="1"/>
+        <access lane="153812404#0_0" pos="370.42" length="148.47" friendlyPos="1"/>
+        <access lane="350552548#0_0" pos="92.29" length="12.08" friendlyPos="1"/>
+        <access lane="350552548#3_0" pos="0.00" length="153.09" friendlyPos="1"/>
+        <access lane="350557467#2_0" pos="370.66" length="18.03" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5777572361" name="Karunamoyee" lane="610018750#0_0" startPos="3586.20" endPos="3786.20" friendlyPos="true" lines="2">
+        <access lane="1341268592#0_0" pos="127.25" length="139.88" friendlyPos="1"/>
+        <access lane="153812404#0_0" pos="370.42" length="148.35" friendlyPos="1"/>
+        <access lane="350552548#0_0" pos="91.43" length="19.32" friendlyPos="1"/>
+        <access lane="350552548#3_0" pos="0.00" length="155.12" friendlyPos="1"/>
+        <access lane="350557467#2_0" pos="371.46" length="10.78" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5777572424" name="Salt Lake Sector V" lane="610018750#1_0" startPos="2.75" endPos="202.75" friendlyPos="true" lines="2">
+        <access lane="-162339448#38_0" pos="21.05" length="58.40" friendlyPos="1"/>
+        <access lane="153759686#3_0" pos="86.93" length="45.11" friendlyPos="1"/>
+        <access lane="162339448#38_0" pos="162.77" length="53.60" friendlyPos="1"/>
+        <access lane="209297293_0" pos="685.97" length="29.07" friendlyPos="1"/>
+        <access lane="310458360#1_0" pos="188.03" length="13.38" friendlyPos="1"/>
+    </busStop>
+    <busStop id="664440061" name="Bidhannagar Road" lane="92642063_0" startPos="1711.84" endPos="1911.84" friendlyPos="true">
+        <access lane="-113752054#1_0" pos="11.67" length="82.53" friendlyPos="1"/>
+        <access lane="-113752054#4_0" pos="43.34" length="97.03" friendlyPos="1"/>
+        <access lane="113752054#1_0" pos="52.31" length="87.33" friendlyPos="1"/>
+        <access lane="1324038319_0" pos="42.87" length="93.75" friendlyPos="1"/>
+        <access lane="693369022_0" pos="397.17" length="41.59" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7468327498" name="Tank No. 4" lane="158821466#1_0" startPos="169.11" endPos="184.11" friendlyPos="true"/>
+    <busStop id="7628479190" name="Salt Lake Sector V" lane="535333527#0_0" startPos="0.00" endPos="75.39" friendlyPos="true" lines="2">
+        <access lane="153759686#3_0" pos="87.39" length="36.46" friendlyPos="1"/>
+        <access lane="162339448#38_0" pos="163.25" length="62.25" friendlyPos="1"/>
+        <access lane="209297293_0" pos="685.49" length="20.42" friendlyPos="1"/>
+        <access lane="310458360#1_0" pos="188.02" length="4.71" friendlyPos="1"/>
+        <access lane="562931989#0_0" pos="87.64" length="56.33" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7630431374" name="Kolkata Chitpur" lane="382679581#1_0" startPos="162.53" endPos="362.53" friendlyPos="true">
+        <access lane="-1105779019#0_0" pos="31.40" length="119.82" friendlyPos="1"/>
+        <access lane="-1105779020#2_0" pos="0.00" length="131.68" friendlyPos="1"/>
+        <access lane="-718805188#6_0" pos="0.00" length="129.13" friendlyPos="1"/>
+        <access lane="1105779019#0_0" pos="14.17" length="115.02" friendlyPos="1"/>
+        <access lane="718805188#6_0" pos="168.28" length="124.97" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7630431377" name="Kolkata Chitpur" lane="382682989#0_0" startPos="164.22" endPos="364.22" friendlyPos="true" lines="Shabd Bhedi Superfast Express: =&gt; Ghazipur">
+        <access lane="-1105779019#0_0" pos="30.33" length="142.63" friendlyPos="1"/>
+        <access lane="-718805188#6_0" pos="0.00" length="151.28" friendlyPos="1"/>
+        <access lane="1105779019#0_0" pos="15.25" length="137.83" friendlyPos="1"/>
+        <access lane="1105779019#1_0" pos="0.00" length="153.30" friendlyPos="1"/>
+        <access lane="718805188#6_0" pos="168.28" length="147.03" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7630431378" name="Kolkata Chitpur" lane="382679585#1_0" startPos="189.44" endPos="389.44" friendlyPos="true">
+        <access lane="-1105779019#0_0" pos="30.33" length="149.39" friendlyPos="1"/>
+        <access lane="-718805188#6_0" pos="0.00" length="157.75" friendlyPos="1"/>
+        <access lane="1105779019#0_0" pos="15.25" length="144.59" friendlyPos="1"/>
+        <access lane="1105779019#1_0" pos="0.00" length="159.40" friendlyPos="1"/>
+        <access lane="718805188#6_0" pos="168.28" length="153.47" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7976140061" name="Central Park" lane="610018750#0_0" startPos="2770.25" endPos="2970.25" friendlyPos="true" lines="2">
+        <access lane="155004888#0_0" pos="198.26" length="187.73" friendlyPos="1"/>
+        <access lane="155004894#0_0" pos="0.00" length="200.72" friendlyPos="1"/>
+        <access lane="207405238#10_0" pos="117.82" length="19.19" friendlyPos="1"/>
+        <access lane="207405240#1_0" pos="0.00" length="191.35" friendlyPos="1"/>
+        <access lane="350552537#1_0" pos="340.84" length="9.89" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7976140062" name="Central Park" lane="535333527#1_0" startPos="1844.87" endPos="2044.87" friendlyPos="true" lines="2">
+        <access lane="155004888#0_0" pos="198.26" length="189.03" friendlyPos="1"/>
+        <access lane="155004894#0_0" pos="0.00" length="201.07" friendlyPos="1"/>
+        <access lane="207405238#10_0" pos="118.04" length="25.78" friendlyPos="1"/>
+        <access lane="207405240#1_0" pos="0.00" length="191.48" friendlyPos="1"/>
+        <access lane="350552537#1_0" pos="340.59" length="3.30" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7976140064" name="City Centre" lane="610018750#0_0" startPos="1857.74" endPos="2057.74" friendlyPos="true" lines="2">
+        <access lane="1127247744#0_0" pos="199.21" length="5.09" friendlyPos="1"/>
+        <access lane="159290205#1_0" pos="36.24" length="96.06" friendlyPos="1"/>
+        <access lane="159290205#2_0" pos="0.00" length="94.11" friendlyPos="1"/>
+        <access lane="207405246#5_0" pos="58.40" length="27.66" friendlyPos="1"/>
+        <access lane="705677600#1_0" pos="21.08" length="68.25" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7976140065" name="City Centre" lane="535333527#3_0" startPos="287.61" endPos="487.61" friendlyPos="true" lines="2">
+        <access lane="1127247744#0_0" pos="199.17" length="1.79" friendlyPos="1"/>
+        <access lane="159290205#1_0" pos="36.24" length="89.32" friendlyPos="1"/>
+        <access lane="159290205#2_0" pos="0.00" length="87.24" friendlyPos="1"/>
+        <access lane="207405246#5_0" pos="58.41" length="34.54" friendlyPos="1"/>
+        <access lane="705677600#1_0" pos="21.08" length="74.48" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7976140067" name="Bengal Chemical" lane="535333527#4_0" startPos="767.07" endPos="967.07" friendlyPos="true" lines="2">
+        <access lane="-154992380#4_0" pos="128.97" length="114.58" friendlyPos="1"/>
+        <access lane="-191129891#6_0" pos="75.65" length="58.79" friendlyPos="1"/>
+        <access lane="150612579#3_0" pos="375.03" length="20.86" friendlyPos="1"/>
+        <access lane="191129891#3_0" pos="323.65" length="63.59" friendlyPos="1"/>
+        <access lane="562946628#0_0" pos="73.58" length="6.35" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7976140068" name="Bengal Chemical" lane="610018750#0_0" startPos="696.09" endPos="896.09" friendlyPos="true" lines="2">
+        <access lane="-154992380#4_0" pos="128.97" length="115.97" friendlyPos="1"/>
+        <access lane="-191129891#6_0" pos="75.48" length="50.97" friendlyPos="1"/>
+        <access lane="150612579#3_0" pos="375.12" length="13.04" friendlyPos="1"/>
+        <access lane="191129891#3_0" pos="323.81" length="55.77" friendlyPos="1"/>
+        <access lane="562946628#0_0" pos="73.40" length="14.16" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7976140070" name="Salt Lake Stadium" lane="610018750#0_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="2">
+        <access lane="150612579#0-AddedOffRampEdge_0" pos="0.00" length="29.21" friendlyPos="1"/>
+        <access lane="150612579#0_0" pos="48.95" length="7.90" friendlyPos="1"/>
+        <access lane="150612579#1_0" pos="0.00" length="172.90" friendlyPos="1"/>
+        <access lane="562946628#13_0" pos="219.72" length="25.70" friendlyPos="1"/>
+        <access lane="758274178_0" pos="0.00" length="173.22" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7976140071" name="Salt Lake Stadium" lane="535333527#4_0" startPos="1507.76" endPos="1707.76" friendlyPos="true" lines="2">
+        <access lane="150612579#0-AddedOffRampEdge_0" pos="0.00" length="32.62" friendlyPos="1"/>
+        <access lane="150612579#0_0" pos="48.85" length="14.30" friendlyPos="1"/>
+        <access lane="150612579#1_0" pos="0.00" length="173.46" friendlyPos="1"/>
+        <access lane="562946628#13_0" pos="219.82" length="19.31" friendlyPos="1"/>
+        <access lane="758274178_0" pos="0.00" length="173.98" friendlyPos="1"/>
+    </busStop>
+</additional>

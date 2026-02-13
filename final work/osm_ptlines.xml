@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-12-23 10:40:55 by Eclipse SUMO netconvert Version 1.21.0
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}\data\typemap\osmNetconvert.typ.xml,${SUMO_HOME}\data\typemap\osmNetconvertAerialway.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+        <lefthand value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <edge_removal>
+        <keep-edges.by-vclass value="passenger,bus,tram,rail_urban,subway,cable_car,rail"/>
+    </edge_removal>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+</netconvertConfiguration>
+-->
+
+<ptLines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/ptlines_file.xsd">
+    <ptLine id="11206312" name="Shabd Bhedi Superfast Express: =&gt; Ghazipur" line="Shabd Bhedi Superfast Express: =&gt; Ghazipur" type="train" vClass="rail" completeness="0.10" missingAfter="9">
+        <route edges="382682989#0 382682989#1 816991244 116235730 816906495#1 824684256#0 824684256#1 382679583#0 382679583#1 382679583#2"/>
+        <busStop id="7630431377" name="Kolkata Chitpur"/>
+    </ptLine>
+    <ptLine id="11207451" name="Shabd Bhedi Superfast Express: =&gt; Kolkata" line="Shabd Bhedi Superfast Express: =&gt; Kolkata" type="train" vClass="rail" completeness="0.11" missingBefore="8">
+        <route edges="824684257#0 824684257#1 824684258 -824684256#1 -824684256#0 382679576 824684254 824684253 -382682989#1 -382682989#0"/>
+        <busStop id="7630431377" name="Kolkata Chitpur"/>
+    </ptLine>
+    <ptLine id="11720071" name="Kolkata Metro Line 2 (Sealdah → Salt Lake Sector V)" line="2" type="subway" vClass="subway" color="green" completeness="0.75" missingBefore="2">
+        <route edges="610018750#0 610018750#1"/>
+        <busStop id="7976140070" name="Salt Lake Stadium"/>
+        <busStop id="7976140068" name="Bengal Chemical"/>
+        <busStop id="7976140064" name="City Centre"/>
+        <busStop id="7976140061" name="Central Park"/>
+        <busStop id="5777572361" name="Karunamoyee"/>
+        <busStop id="5777572424" name="Salt Lake Sector V"/>
+    </ptLine>
+    <ptLine id="11720072" name="Kolkata Metro Line 2 (Salt Lake Sector V → Sealdah)" line="2" type="subway" vClass="subway" color="green" completeness="0.75" missingAfter="2">
+        <route edges="535333527#0 535333527#1 535333527#2 535333527#3 535333527#4"/>
+        <busStop id="7628479190" name="Salt Lake Sector V"/>
+        <busStop id="5189265479" name="Karunamoyee"/>
+        <busStop id="7976140062" name="Central Park"/>
+        <busStop id="7976140065" name="City Centre"/>
+        <busStop id="7976140067" name="Bengal Chemical"/>
+        <busStop id="7976140071" name="Salt Lake Stadium"/>
+    </ptLine>
+    <ptLine id="2753056" line="17" type="tram" vClass="tram" completeness="0.50" missingBefore="1">
+        <route edges="-205080184#2 -205080184#0 -1039282011#1 -205080225#12 -205080225#11 -205080225#10 -205080225#9 -205080225#8 -205080225#7 -205080225#5 -205080225#3 -205080225#1 -205080225#0 -205080226#6 -205080226#2 -205080226#0"/>
+        <busStop id="2207611901" name="Bidhan Nagar"/>
+    </ptLine>
+    <ptLine id="2753057" line="20/17" type="tram" vClass="tram" completeness="1.00">
+        <route edges="-205080184#2 -205080184#0 -1039282011#1 -205080225#12 -205080225#11 -205080225#10 -205080225#9 -205080225#8 -205080225#7 -205080225#5 -205080225#3 -205080225#1 -205080225#0 -205080226#6 -205080226#2 -205080226#0"/>
+        <busStop id="2207611901" name="Bidhan Nagar"/>
+    </ptLine>
+    <ptLine id="2988949" name="Hazarduari Express: Krishnanagar =&gt; Lalgola" line="13114" type="train" vClass="rail" completeness="0.08" missingAfter="11">
+        <route edges="-224838572 824684255#0 824684255#1 382679576 824684256#0 824684256#1 382679583#0 382679583#1 382679583#2"/>
+        <busStop id="1074604498" name="Kolkata Chitpur"/>
+    </ptLine>
+    <ptLine id="8033916" name="Kolkata Metro Line 1 (Kavi Subhash → Dakshineshwar)" line="1" type="subway" vClass="subway" color="blue" completeness="0.04" missingBefore="21" missingAfter="4">
+        <route edges="610018755"/>
+        <busStop id="11703491151" name="Belgachia"/>
+    </ptLine>
+    <ptLine id="8034180" name="Kolkata Metro Line 1 (Dakshineshwar → Kavi Subhash)" line="1" type="subway" vClass="subway" color="blue" completeness="0.04" missingBefore="4" missingAfter="21">
+        <route edges="1124379129#0 1124379129#0"/>
+        <busStop id="11703491150" name="Belgachia"/>
+    </ptLine>
+</ptLines>

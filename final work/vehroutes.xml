@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-12-23 10:41:01 by Eclipse SUMO sumo Version 1.21.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\User\2024-12-23-10-40-36\osm.net.xml.gz"/>
+        <route-files value="C:\Users\User\2024-12-23-10-40-36\trips.trips.xml"/>
+        <additional-files value="C:\Users\User\2024-12-23-10-40-36\osm_stops.add.xml"/>
+    </input>
+
+    <output>
+        <vehroute-output value="C:\Users\User\2024-12-23-10-40-36\vehroutes.xml"/>
+        <stop-output value="C:\Users\User\2024-12-23-10-40-36\stopinfos.xml"/>
+    </output>
+
+    <time>
+        <begin value="0.0"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-interval value="0"/>
+    </routing>
+
+    <report>
+        <aggregate-warnings value="5"/>
+        <error-log value="C:\Users\User\2024-12-23-10-40-36\trips.trips.xml.errorlog"/>
+        <no-step-log value="true"/>
+    </report>
+
+</sumoConfiguration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vehicle id="1_train_Shabd_Bhedi_Superfast_Express:_=_Kolkata:0" type="pt_train" depart="52.00" departLane="0" arrival="214.00">
+        <route edges="382682989#0"/>
+        <stop busStop="7630431377" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="0_train_Shabd_Bhedi_Superfast_Express:_=_Ghazipur:0" type="pt_train" depart="15.00" departLane="0" arrival="224.00">
+        <route edges="382682989#0 382682989#1 816991244 116235730 816906495#1 824684256#0 824684256#1 382679583#0 382679583#1 382679583#2"/>
+        <stop busStop="7630431377" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="4_tram_17:0" type="pt_tram" depart="253.00" departLane="0" arrival="293.00">
+        <route edges="205080226#7"/>
+        <stop busStop="2207611901" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="5_tram_20/17:0" type="pt_tram" depart="383.00" departLane="0" arrival="423.00">
+        <route edges="205080226#7"/>
+        <stop busStop="2207611901" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="6_train_13114:0" type="pt_train" depart="406.00" departLane="0" arrival="543.00">
+        <route edges="224838572"/>
+        <stop busStop="1074604498" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="7_subway_1:0" type="pt_subway" depart="441.00" departLane="0" arrival="559.00">
+        <route edges="610018755"/>
+        <stop busStop="11703491151" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="2_subway_2:0" type="pt_subway" depart="133.00" departLane="0" arrival="564.00">
+        <route edges="610018750#0 610018750#1"/>
+        <stop busStop="7976140070" duration="30.00"/>
+        <stop busStop="7976140068" duration="30.00"/>
+        <stop busStop="7976140064" duration="30.00"/>
+        <stop busStop="7976140061" duration="30.00"/>
+        <stop busStop="5777572361" duration="30.00"/>
+        <stop busStop="5777572424" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="3_subway_2:1" type="pt_subway" depart="165.00" departLane="0" arrival="577.00">
+        <route edges="535333527#0 535333527#1 535333527#2 535333527#3 535333527#4"/>
+        <stop busStop="7628479190" duration="30.00"/>
+        <stop busStop="5189265479" duration="30.00"/>
+        <stop busStop="7976140062" duration="30.00"/>
+        <stop busStop="7976140065" duration="30.00"/>
+        <stop busStop="7976140067" duration="30.00"/>
+        <stop busStop="7976140071" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="8_subway_1:1" type="pt_subway" depart="535.00" departLane="0" arrival="652.00">
+        <route edges="1124379129#0"/>
+        <stop busStop="11703491150" duration="30.00"/>
+    </vehicle>
+
+</routes>
