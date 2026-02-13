@@ -1,0 +1,275 @@
+import pandas as pd
+import numpy as np
+
+def get_total(route, my_data):
+    return sum(my_data.loc[n, 'need'] for n in route)
+
+def read_file(fname):
+    points = []
+    needs = []
+    
+    f = open(fname, 'r')
+    lines = f.readlines()
+    
+    reading_xy = False
+    reading_needs = False
+    
+    for line in lines:
+        if 'CAPACITY' in line:
+            max_truck = int(line.split(':')[1].strip())
+        elif 'NODE_COORD_SECTION' in line:
+            reading_xy = True
+            continue
+        elif 'DEMAND_SECTION' in line:
+            reading_xy = False
+            reading_needs = True
+            continue
+        elif 'DEPOT_SECTION' in line:
+            break
+            
+        if reading_xy:
+            try:
+                num, x, y = map(int, line.strip().split())
+                points.append([num-1, x, y])
+            except:
+                continue
+                
+        if reading_needs:
+            try:
+                num, need = map(int, line.strip().split())
+                needs.append([num-1, need])
+            except:
+                continue
+    
+    my_data = pd.DataFrame(points, columns=['num', 'x', 'y'])
+    my_data.set_index('num', inplace=True)
+    
+    needs_data = pd.DataFrame(needs, columns=['num', 'need'])
+    needs_data.set_index('num', inplace=True)
+    my_data['need'] = needs_data['need']
+    
+    start_x = my_data.loc[0, 'x']
+    start_y = my_data.loc[0, 'y']
+    my_data['dist_start'] = np.sqrt((my_data['x'] - start_x)**2 + (my_data['y'] - start_y)**2)
+    
+    size = len(my_data)
+    distances = pd.DataFrame(index=range(size), columns=range(size))
+    
+    for i in range(size):
+        for j in range(size):
+            d = np.sqrt(
+                (my_data.loc[i, 'x'] - my_data.loc[j, 'x'])**2 +
+                (my_data.loc[i, 'y'] - my_data.loc[j, 'y'])**2
+            )
+            distances.loc[i, j] = d
+            distances.loc[j, i] = d
+    
+    return my_data, distances, max_truck
+
+def get_points(txt):
+    txt = txt[1:]
+    txt = txt[:-1]
+    nums = txt.split(',')
+    return [int(nums[0]), int(nums[1])]
+
+def is_middle(point, path):
+    try:
+        pos = path.index(point)
+        return pos != 0 and pos != (len(path) - 1)
+    except:
+        return False
+
+def join_paths(path1, path2, connect):
+    p1 = path1.copy()
+    p2 = path2.copy()
+    
+    if p1.index(connect[0]) != (len(p1) - 1):
+        p1.reverse()
+    if p2.index(connect[1]) != 0:
+        p2.reverse()
+    return p1 + p2
+
+def find_paths(connect, all_paths):
+    found = []
+    path_nums = [-1, -1]
+    count = 0
+    
+    for i, path in enumerate(all_paths):
+        for point in connect:
+            if point in path:
+                path_nums[count] = i
+                found.append(point)
+                count += 1
+                
+    same_path = 1 if path_nums[0] == path_nums[1] else 0
+    return found, count, path_nums, same_path
+
+def use_drones(path, my_data, num_drones=5, drone_max=10, battery=100):
+    todo_points = set(path[1:-1])
+    landing_spots = set()
+    free_drones = set(range(num_drones))
+    
+    final_plan = {
+        'truck_path': [path[0]],
+        'drone_stuff': [],
+        'total': 0
+    }
+    
+    truck_now = path[0]
+    
+    while todo_points:
+        if free_drones:
+            drone = free_drones.pop()
+            stuff_carried = 0
+            power_left = battery
+            drone_path = []
+            current = truck_now
+            
+            while (stuff_carried < drone_max and 
+                   power_left > 0 and todo_points):
+                next_stop = min(todo_points, 
+                              key=lambda x: np.sqrt(
+                                  (my_data.loc[current, 'x'] - my_data.loc[x, 'x'])**2 +
+                                  (my_data.loc[current, 'y'] - my_data.loc[x, 'y'])**2
+                              ))
+                
+                power_needed = np.sqrt(
+                    (my_data.loc[current, 'x'] - my_data.loc[next_stop, 'x'])**2 +
+                    (my_data.loc[current, 'y'] - my_data.loc[next_stop, 'y'])**2
+                )
+                
+                if power_needed <= power_left:
+                    drone_path.append(next_stop)
+                    todo_points.remove(next_stop)
+                    power_left -= power_needed
+                    stuff_carried += 1
+                    current = next_stop
+                else:
+                    break
+            
+            if drone_path:
+                landing_spots.add(drone_path[-1])
+                final_plan['drone_stuff'].append({
+                    'drone': drone,
+                    'path': drone_path,
+                    'landing': drone_path[-1]
+                })
+        
+        possible = todo_points.union(landing_spots)
+        if not possible:
+            break
+            
+        next_truck = min(possible, 
+                        key=lambda x: np.sqrt(
+                            (my_data.loc[truck_now, 'x'] - my_data.loc[x, 'x'])**2 +
+                            (my_data.loc[truck_now, 'y'] - my_data.loc[x, 'y'])**2
+                        ))
+        
+        truck_dist = np.sqrt(
+            (my_data.loc[truck_now, 'x'] - my_data.loc[next_truck, 'x'])**2 +
+            (my_data.loc[truck_now, 'y'] - my_data.loc[next_truck, 'y'])**2
+        )
+        
+        final_plan['truck_path'].append(next_truck)
+        final_plan['total'] += truck_dist
+        
+        if next_truck in todo_points:
+            todo_points.remove(next_truck)
+        
+        if next_truck in landing_spots:
+            landing_spots.remove(next_truck)
+            for op in final_plan['drone_stuff']:
+                if op['landing'] == next_truck:
+                    free_drones.add(op['drone'])
+        
+        truck_now = next_truck
+    
+    final_plan['truck_path'].append(path[0])
+    back_dist = np.sqrt(
+        (my_data.loc[truck_now, 'x'] - my_data.loc[path[0], 'x'])**2 +
+        (my_data.loc[truck_now, 'y'] - my_data.loc[path[0], 'y'])**2
+    )
+    final_plan['total'] += back_dist
+    
+    return final_plan
+
+if __name__ == "__main__":
+    file = "A-n32-k5.vrp"
+    my_data, distances, max_truck = read_file(file)
+    
+    saves = {}
+    for r in distances.index:
+        for c in distances.columns:
+            if int(c) != int(r):            
+                big = max(int(r), int(c))
+                small = min(int(r), int(c))
+                key = f'({big},{small})'
+                saves[key] = my_data['dist_start'][int(r)] + my_data['dist_start'][int(c)] - distances.loc[r, c]
+    
+    saves_df = pd.DataFrame.from_dict(saves, orient='index', columns=['save'])
+    saves_df.sort_values(by=['save'], ascending=False, inplace=True)
+    
+    paths = []
+    more_points = True
+    left_points = list(my_data.index)
+    left_points.remove(0)
+    
+    step = 0
+    for link in saves_df.index:
+        step += 1
+        if more_points:
+            link = get_points(link)
+            found, num_found, path_nums, same_path = find_paths(link, paths)
+            
+            if num_found == 0:
+                if get_total(link, my_data) <= max_truck:
+                    paths.append(link)
+                    try:
+                        left_points.remove(link[0])
+                        left_points.remove(link[1])
+                    except ValueError:
+                        pass
+            
+            elif num_found == 1:
+                this_point = found[0]
+                path_num = path_nums[0]
+                where = paths[path_num].index(this_point)
+                temp = link.copy()
+                temp.remove(this_point)
+                new_point = temp[0]
+                
+                if not is_middle(this_point, paths[path_num]):
+                    if get_total(paths[path_num] + [new_point], my_data) <= max_truck:
+                        if where == 0:
+                            paths[path_num].insert(0, new_point)
+                        else:
+                            paths[path_num].append(new_point)
+                        try:
+                            left_points.remove(new_point)
+                        except ValueError:
+                            pass
+            
+            elif num_found == 2 and same_path == 0:
+                if (not is_middle(found[0], paths[path_nums[0]]) and 
+                    not is_middle(found[1], paths[path_nums[1]])):
+                    if get_total(paths[path_nums[0]] + paths[path_nums[1]], my_data) <= max_truck:
+                        path1 = paths[path_nums[0]]
+                        path2 = paths[path_nums[1]]
+                        new_path = join_paths(path1, path2, found)
+                        paths.pop(max(path_nums[0], path_nums[1]))
+                        paths.pop(min(path_nums[0], path_nums[1]))
+                        paths.append(new_path)
+        
+        more_points = bool(len(left_points) > 0)
+    
+    for point in left_points:
+        paths.append([point])
+    
+    for path in paths:
+        path.insert(0, 0)
+        path.append(0)
+    
+    better_paths = []
+    for path in paths:
+        better = use_drones(path, my_data)
+        better_paths.append(better)
