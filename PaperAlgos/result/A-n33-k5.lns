@@ -1,0 +1,18 @@
+Cost : 617.5914253368715
+
+Truck Routes
+------------
+Truck Route #1 : 0 22 15 15 4 12 17 9 16 29 0
+Truck Route #2 : 0 20 13 8 26 5 27 27 25 30 0
+Truck Route #3 : 0 31 1 1 21 14 19 6 6 24 0
+Truck Route #4 : 0 2 32 32 0
+Truck Route #5 : 0 11 18 28 23 0
+
+Drone Routes
+------------
+Truck #1 - Drone #1 - Route #1 : 12 10 17
+Truck #1 - Drone #1 - Route #2 : 9 3 16
+Truck #2 - Drone #1 - Route #1 : 8 7 26
+Truck #3 - Drone #1 - Route #1 : 
+Truck #4 - Drone #1 - Route #1 : 
+Truck #5 - Drone #1 - Route #1 : 
