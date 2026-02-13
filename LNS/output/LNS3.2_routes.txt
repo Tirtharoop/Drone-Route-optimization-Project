@@ -1,0 +1,118 @@
+= TRUCK ROUTES ===
+Truck 1 Route:
+  1 -> 7 | Distance: 51.88
+  7 -> 3 | Distance: 26.25
+  3 -> 1 | Distance: 77.88
+Total Distance for Truck 1: 156.01
+
+Truck 2 Route:
+  1 -> 29 | Distance: 84.86
+  29 -> 5 | Distance: 12.81
+  5 -> 12 | Distance: 8.54
+  12 -> 1 | Distance: 101.41
+Total Distance for Truck 2: 207.63
+
+Truck 3 Route:
+  1 -> 26 | Distance: 75.96
+  26 -> 11 | Distance: 16.16
+  11 -> 16 | Distance: 17.12
+  16 -> 1 | Distance: 81.74
+Total Distance for Truck 3: 190.98
+
+Truck 4 Route:
+  1 -> 25 | Distance: 25.24
+  25 -> 28 | Distance: 8.06
+  28 -> 1 | Distance: 25.96
+Total Distance for Truck 4: 59.26
+
+Truck 5 Route:
+  1 -> 32 | Distance: 72.78
+  32 -> 20 | Distance: 5.39
+  20 -> 1 | Distance: 73.82
+Total Distance for Truck 5: 151.99
+
+
+=== DRONE ROUTES ===
+Drone Trip 1:
+  Launch from: 32
+  Deliver to nodes: [2, 13]
+  Return to: 25
+  Payload: 40
+  Distance: 94.30
+  Drone Cost: 62.86
+  Truck Distance Between Launch and Return: 67.96
+  Truck Travel Time: 67.96
+  Drone Travel Time: 62.86
+  🚚 Truck Waiting Time: 0.00
+  Node Demands:
+    Node 2: Demand 19
+    Node 13: Demand 21
+
+Drone Trip 2:
+  Launch from: 20
+  Deliver to nodes: [18, 4, 6, 21]
+  Return to: 26
+  Payload: 40
+  Distance: 249.22
+  Drone Cost: 166.14
+  Truck Distance Between Launch and Return: 126.06
+  Truck Travel Time: 126.06
+  Drone Travel Time: 166.14
+  🚚 Truck Waiting Time: 40.08
+  Node Demands:
+    Node 18: Demand 19
+    Node 4: Demand 6
+    Node 6: Demand 7
+    Node 21: Demand 8
+
+Drone Trip 3:
+  Launch from: 7
+  Deliver to nodes: [8, 14, 24]
+  Return to: 3
+  Payload: 40
+  Distance: 112.86
+  Drone Cost: 75.24
+  Truck Distance Between Launch and Return: 26.25
+  Truck Travel Time: 26.25
+  Drone Travel Time: 75.24
+  🚚 Truck Waiting Time: 48.99
+  Node Demands:
+    Node 8: Demand 16
+    Node 14: Demand 16
+    Node 24: Demand 8
+
+Drone Trip 4:
+  Launch from: 29
+  Deliver to nodes: [9, 10, 23, 19, 22]
+  Return to: 32
+  Payload: 39
+  Distance: 209.42
+  Drone Cost: 139.61
+  Truck Distance Between Launch and Return: 75.66
+  Truck Travel Time: 75.66
+  Drone Travel Time: 139.61
+  🚚 Truck Waiting Time: 63.95
+  Node Demands:
+    Node 9: Demand 6
+    Node 10: Demand 16
+    Node 23: Demand 4
+    Node 19: Demand 1
+    Node 22: Demand 12
+
+Drone Trip 5:
+  Launch from: 25
+  Deliver to nodes: [31, 17, 27, 15, 30]
+  Return to: 16
+  Payload: 39
+  Distance: 146.15
+  Drone Cost: 97.44
+  Truck Distance Between Launch and Return: 60.07
+  Truck Travel Time: 60.07
+  Drone Travel Time: 97.44
+  🚚 Truck Waiting Time: 37.36
+  Node Demands:
+    Node 31: Demand 14
+    Node 17: Demand 18
+    Node 27: Demand 2
+    Node 15: Demand 3
+    Node 30: Demand 2

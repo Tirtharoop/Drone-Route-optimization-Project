@@ -1,0 +1,93 @@
+Loaded 5 truck routes and 5 drone route sets
+Total demand nodes: 32
+Initial solution evaluation:
+
+Current Solution Statistics:
+Objective value: 239190.50
+Total cost: 2381.00
+Makespan (max time): 476.00 hours
+Nodes served by trucks: 24
+Nodes served by drones: 8
+Total truck distance: 1714.00
+Average truck route distance: 342.80
+Max truck route distance: 476.00
+Total drone distance: 653.00
+Average drone route distance: 93.29
+Max drone route distance: 109.00
+
+Starting optimization...
+Starting Truck-Drone Routing optimization...
+Iteration 0, Current objective: 238561.00, Best: 238561.00
+Iteration 100, Current objective: 83810.50, Best: 83810.00
+Iteration 200, Current objective: 83810.50, Best: 83810.00
+Iteration 300, Current objective: 83810.00, Best: 83810.00
+Iteration 400, Current objective: 83810.50, Best: 83810.00
+
+Optimization completed:
+Best objective: 83810.00
+
+
+
+
+======= DETAILED ROUTE INFORMATION =======
+
+Optimized Route 1:
+Truck Route: [0, 27, 26, 17, 17, 25, 1, 4, 12, 0]
+  Distance: 148.00 km
+  Travel Time: 148.00 hours
+  Cost: 148.00
+Drone Routes:
+  Drone Set 1:
+  Drone Set 2:
+
+Optimized Route 2:
+Truck Route: [0, 32, 7, 2, 28, 13, 22, 0]
+  Distance: 167.00 km
+  Travel Time: 167.00 hours
+  Cost: 167.00
+Drone Routes:
+  Drone Set 1:
+    Route 3: [2, 18, 24, 15, 10, 14, 6, 31, 19, 9, 30, 30, 30, 30, 11, 23, 8, 20, 29, 28]
+      Distance: 227.00 km
+      Travel Time: 151.33 hours
+      Cost: 229.00
+      Load: 2138 (Capacity: 9999)
+  Drone Set 2:
+
+Optimized Route 3:
+Truck Route: [0, 16, 5, 21, 3, 0]
+  Distance: 76.00 km
+  Travel Time: 76.00 hours
+  Cost: 76.00
+Drone Routes:
+  Drone Set 1:
+  Drone Set 2:
+
+Optimized Route 4:
+Truck Route: [0, 0]
+  Distance: 0.00 km
+  Travel Time: 0.00 hours
+  Cost: 0.00
+Drone Routes:
+  Drone Set 1:
+  Drone Set 2:
+
+Optimized Route 5:
+Truck Route: [0, 0]
+  Distance: 0.00 km
+  Travel Time: 0.00 hours
+  Cost: 0.00
+Drone Routes:
+  Drone Set 1:
+  Drone Set 2:
+
+======= SOLUTION SUMMARY =======
+Total Objective Value: 83810.00
+Total Cost: 620.00
+Maximum Operation Time (Makespan): 167.00 hours
+Total Customers Served: 36
+  - By Truck: 18
+  - By Drone: 18
+======================================
+
+Optimization completed successfully!

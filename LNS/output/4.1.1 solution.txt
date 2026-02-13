@@ -1,0 +1,108 @@
+Loaded 5 truck routes and 5 drone route sets
+Total demand nodes: 32
+Initial solution evaluation:
+
+Current Solution Statistics:
+Objective value: 239198.50
+Total cost: 2397.00
+Makespan (max time): 476.00 hours
+Nodes served by trucks: 24
+Nodes served by drones: 8
+Total truck distance: 1714.00
+Average truck route distance: 342.80
+Max truck route distance: 476.00
+Total drone distance: 653.00
+Average drone route distance: 93.29
+Max drone route distance: 109.00
+
+Starting optimization...
+Starting Truck-Drone Routing optimization...
+Iteration 0, Current objective: 238570.00, Best: 238570.00
+Iteration 100, Current objective: 84411.50, Best: 84411.50
+Iteration 200, Current objective: 84412.50, Best: 84411.50
+Iteration 300, Current objective: 84411.50, Best: 84411.50
+Iteration 400, Current objective: 84411.50, Best: 84411.50
+
+Optimization completed:
+Best objective: 84411.50
+
+
+
+
+======= DETAILED ROUTE INFORMATION =======
+
+Optimized Route 1:
+Truck Route: [0, 0]
+  Distance: 0.00 km
+  Travel Time: 0.00 hours
+  Cost: 0.00
+Drone Routes:
+  Drone 1:
+  Drone 2:
+
+Optimized Route 2:
+Truck Route: [0, 22, 13, 13, 13, 13, 7, 2, 11, 23, 23, 8, 32, 0]
+  Distance: 165.00 km
+  Travel Time: 165.00 hours
+  Cost: 165.00
+Drone Routes:
+  Drone 1:
+    Route 1: [7, 29, 28, 2]
+      Distance: 39.00 km
+      Travel Time: 26.00 hours
+      Cost: 45.00
+      Load: 470 (Capacity: 9999)
+    Route 2: [13, 20, 13]
+      Distance: 14.00 km
+      Travel Time: 9.33 hours
+      Cost: 18.00
+      Load: 363 (Capacity: 9999)
+  Drone 2:
+
+Optimized Route 3:
+Truck Route: [0, 0]
+  Distance: 0.00 km
+  Travel Time: 0.00 hours
+  Cost: 0.00
+Drone Routes:
+  Drone 1:
+  Drone 2:
+
+Optimized Route 4:
+Truck Route: [0, 12, 19, 15, 0]
+  Distance: 168.00 km
+  Travel Time: 168.00 hours
+  Cost: 168.00
+Drone Routes:
+  Drone 1:
+    Route 1: [19, 31, 6, 10, 14, 18, 30, 30, 9, 24, 15]
+      Distance: 135.00 km
+      Travel Time: 90.00 hours
+      Cost: 155.00
+      Load: 980 (Capacity: 9999)
+  Drone 2:
+
+Optimized Route 5:
+Truck Route: [0, 4, 1, 3, 21, 5, 16, 0]
+  Distance: 166.00 km
+  Travel Time: 166.00 hours
+  Cost: 166.00
+Drone Routes:
+  Drone 1:
+    Route 2: [4, 27, 26, 17, 25, 1]
+      Distance: 96.00 km
+      Travel Time: 64.00 hours
+      Cost: 106.00
+      Load: 796 (Capacity: 9999)
+  Drone 2:
+
+======= SOLUTION SUMMARY =======
+Total Objective Value: 84411.50
+Total Cost: 823.00
+Maximum Operation Time (Makespan): 168.00 hours
+Total Customers Served: 37
+  - By Truck: 21
+  - By Drone: 16
+======================================
+
+Optimization completed successfully!
